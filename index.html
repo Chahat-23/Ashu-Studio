@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASHU STUDIO</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="ft.css">
+<link href="https://fonts.googleapis.com/css?family=Merienda|Courgette|Crimson+Text&display=swap" rel="stylesheet">
+
+</head>
+<body><nav>
+<div class="navbar">
+  <a  href="#about">Home    </a>
+  <a href="#services">Services   </a>
+  <a href="#app">Approach   </a>
+  <a href="#lastnav">Contact</a>
+  <a href="works.php">Work-Proofs   </a>
+</div></nav>
+<script>
+	$(document).ready(function () {
+		$(document).on("scroll", onScroll);
+ 
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+ 
+			$('a').each(function () {
+				$(this).removeClass('active');
+			})
+			$(this).addClass('active');
+ 
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top+2
+			}, 500, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
+	});
+ 
+	function onScroll(event){
+		var scrollPosition = $(document).scrollTop();
+		$('nav a').each(function () {
+			var currentLink = $(this);
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+				$('nav ul li a').removeClass("active");
+				currentLink.addClass("active");
+			}
+			else{
+				currentLink.removeClass("active");
+			}
+		});
+	}
+</script>
+<br><br><br><br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="icon.jpeg" alt="icon" width=180vw; height=250vw; style="border-radius:15vw;">
+    <h2 style=" color:#FBC02D; font-size:2vw; list-style-type:none; float: left;">"A <b>PICTURE</b> is worth the <b>THOUSAND WORDS</b>...<br>But, The <b>MEMORIES</b> are <b>PRICELESS!!</b>"</h2>
+
+    </div>
+<div class="col-sm-10">
+  
+<div class ="rectangle" style="margin:0 auto; width:100%;">
+
+    <center><h1 id="about"><b>Photographers</b> and <b>Event Managers</b></h1></center>
+    </div>
+  
+<hr style=" border: 3px solid #212121;">
+<center>
+<div  class="box" id="about" style=" max-width:900px;" >
+    <p style="color:#b00020;">Ashu studio provides <b>Photography , Event Management </b> and <b> Various customised products for you and your loved ones.</b>
+    <br>We provide all the facilities all over <b>INDIA</b>.
+    <br><br>Along with all the facilities, We provide you the opportunity to manage the cost by contacting our staff , service and charge can be customised accordingly.
+    <br>We provide Photo and Video shootings and also various albums production according to your wishes.
+    <br>We help you manage your events with the bestest accomodations and facilities fitting in your budget.
+    <br>Various customised items are also provided with every thing of your choice.
+    <br></p><p style="color:#29B6F6;">
+    <b>ENJOY WITH AFFORDABLE PRICES AND BESTEST FACILITIES...!!</b></p></div>
+    <table id="services">
+        <tr><td style="background-image:url(b1.jpg); background-repeat:no-repeat; border: 4px solid #b00020; background-size:cover; text-align:left;">
+        <p style=" font-size:3vw; background-color:#b00020; color:white;"><b>PHOTO SHOOTS</b></p>
+        <iframe width="400px" height="315" src="https://www.youtube.com/embed/t-atiJFmXmA" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        </td></tr>
+        <tr>
+        <td style="background-image:url(b3.jpg); background-repeat:no-repeat; border: 4px solid #b00020; background-size:cover; text-align:left;">
+        <p style=" font-size:3vw; background-color:#b00020; color:white;"><b>CUSTOMISED GIFTS</b></p>
+        <iframe width="400px" height="315" src="https://www.youtube.com/embed/VgTPtPgQglQ" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></td>
+        </td></tr>
+        <tr>
+        <td style="background-image:url(b2.jpg); background-repeat:no-repeat; border: 4px solid #b00020; background-size:cover; text-align:left;">
+        <p style=" font-size:3vw; background-color:#b00020; color:white; "><b>EVENTS MANAGEMENTS</b></p>
+        <iframe width="400px" height="315" src="https://www.youtube.com/embed/15mIzMNhhqU" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        </td></tr>
+        </table>
+  
+<div class ="square" id="app">
+    <div class ="approach" >
+    <h3>OUR APPROACH...</h3></div>
+    <h4><b>Learn</b></h4>
+    <p>We want to know you well. What do you expect from us? We can work best when we can become more than the “hired help”.
+    We expect from you to co-operate with our employees and give them best of all the detailed informations which might be required!
+    Login to contact Us.</p>
+    <hr><br>
+    <h4><b>Build</b></h4>
+    <p>It's time to get started and complete the requirements that you have. Leave the plannings, management, and all the other work loads on us.
+    We are equipped well to meet your every requirement and the best results can be assured.</p>
+    <hr><br>
+    <h4><b>Deliver</b></h4>
+    <p id="lastnav">Just sit and relax..It's all finally done and we are here with the bestest results. All the plannings got their awesome results.
+    It's time for you to enjoy with our services provided by our employees!</p>
+    </div>
+
+  </center>
+</div>
+
+  </div>
+</div>
+    
+<center>
+    <div class="foot" id="lastnav">
+        <h5>CONTACT US</h5>
+        <table><tr>
+                <td>      <img src="icon.jpeg" alt="icon" width=180vw; height=250vw; style="border-radius:15vw;">
+                </td><td>
+        <p>Phone : 8602528550</p>
+        <p>Email : ajayshrivastava00@gmail.com</p>
+        <p><a href="https://www.facebook.com/ajay.shrivastava.73594479?epa=SEARCH_BOX"><img src="logo.png" alt="FACEBOOK" width=80vw; height=100vw;></a></p></td>
+    </tr></table>
+    </div>
+<div class="mapouter">
+<div class="gmap_canvas" id="mp">
+<iframe width="100%" height="200" id="gmap_canvas" 
+src="https://maps.google.com/maps?q=football%20ground%20rajendra%20nagar%20bhopal%2Cmadhya%20pradesh%2Cindia&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+ scrolling="no" marginheight="0" marginwidth="0">
+</iframe>Google Maps <a href="https://www.embedgooglemap.net">Google Map</a>
+</div>
+</div></center></body>
+</html>
